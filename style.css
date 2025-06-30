@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* 2. Remove default margin */
+  * {
+    margin: 0;
+  }
+  
+  /* 3. Enable keyword animations */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      interpolate-size: allow-keywords;
+    }
+  }
+  
+  body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  /* 6. Improve media defaults */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  
+  /* 7. Inherit fonts for form controls */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  
+  /* 8. Avoid text overflows */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  
+  /* 9. Improve line wrapping */
+  p {
+    text-wrap: pretty;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+  
+  /*
+    10. Create a root stacking context
+  */
+  #root, #__next {
+    isolation: isolate;
+  }
+.container > * {
+ background-color: lightblue;
+  border: 1px solid blue;
+}
+
+body{
+  font-family: 'Roboto';
+}
+.container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);   
+}
+.sidebar{
+  grid-column: 1 / 2;
+  grid-row: 1 / -1;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: repeat(20, 1fr);
+  gap: 20px;
+  background-color: #1992D4;
+  font-weight:500;
+}
+
+.sidebarTop{
+  grid-row: 1 / 2;
+  font-size: 30px;
+}
+
+.sidebarMiddle{
+  grid-row: 3/ 9;
+}
+
+.sidebarBottom{
+  grid-row: 11 / 14;
+}
+
+.sidebarText{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  margin-left: 3vw;
+  margin-top:1vh;
+  color: antiquewhite;
+}
+
+.sidebarTop img{
+  width: 75px;
+  height: auto;
+  filter: invert(86%) sepia(0%) saturate(4766%) hue-rotate(291deg) brightness(117%) contrast(85%); /* change color of svg*/
+}
+
+.sidebarMiddle img, .sidebarBottom img{
+  width: auto;
+  height: 30px;
+  filter: invert(86%) sepia(0%) saturate(4766%) hue-rotate(291deg) brightness(117%) contrast(85%); /* change color of svg*/
+}
+
+.sidebarMiddle, .sidebarBottom{
+  font-size: 20px;
+  display: grid;
+  gap: 5px;
+}
+
+.sidebarTop .sidebarText{
+  margin-left: 2vw;
+}
+
