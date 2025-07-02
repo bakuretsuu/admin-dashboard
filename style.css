@@ -63,7 +63,8 @@ body{
 }
 .container{
   display: grid;
-  grid-template-columns: repeat(5, 1fr);   
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr) ;
 }
 .sidebar{
   grid-column: 1 / 2;
@@ -122,3 +123,65 @@ body{
   margin-left: 2vw;
 }
 
+.header{
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(15, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column: 2 / -1;
+  grid-row: 1 / 2;
+}
+
+.header img {
+  width: auto;
+  height: 30px;
+}
+
+.searchbar{
+  grid-column: 1 / 10;
+  grid-row: 1 / 2;
+  display: flex;
+  margin-left: 25px;
+  margin-top: 25px;
+  gap: 10px;
+}
+
+.searchbar input{
+  height: 30px;
+  width: 1200px;
+}
+
+.profile{
+  grid-column:12 / -1;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+}
+
+.greeting{
+  grid-row: 2/ -1;
+  grid-column: 2 / 8;
+  display: flex;
+  flex-direction: row;
+}
+
+.headerAction{
+  grid-column: 11 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.btn{
+  display: inline-block;
+  padding: 0.6em 2.5em;
+  background-color: #1992D4;
+  color: white;
+  border-radius: 50px; 
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
